@@ -109,3 +109,26 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 */
+
+
+
+// jsnacks
+/*
+var alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "u", "v", "w", "x", "y", "z"];
+var min = parseInt(prompt("inserisci un numero compreso fra 0 a " + (alfabeto.length - 2)));
+var max = parseInt(prompt("inserisci un numero compreso fra " + " è " + (alfabeto.length - 1)));
+
+console.log(filterArray(alfabeto, min, max));
+
+function filterArray(arr, min, max) {
+    var arrReturn = [];
+
+    for (var i in alfabeto) {
+        if (i >= min && i <= max) {
+            arrReturn.push(arr[i]);
+        }
+    }
+
+    return arrReturn;
+}
+*/
