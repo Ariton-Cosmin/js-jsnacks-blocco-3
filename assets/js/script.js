@@ -112,7 +112,7 @@ function getRandomNumber(min, max) {
 
 
 
-// jsnacks
+// jsnacks 3
 /*
 var alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "u", "v", "w", "x", "y", "z"];
 var min = parseInt(prompt("inserisci un numero compreso fra 0 a " + (alfabeto.length - 2)));
@@ -132,3 +132,47 @@ function filterArray(arr, min, max) {
     return arrReturn;
 }
 */
+
+
+
+// jsnacks 4
+/*
+
+*/
+var arr1 = ["a", "b", "c"];
+var arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var minor = arr1;
+var major = arr2;
+if (arr1.length > arr2.length) {
+    minor = arr2;
+    major = arr1;
+}
+
+if (arr1.length === arr2.length) {
+    console.log("sono uguali");
+} else {
+    while (minor.length < major.length) {
+        minor.push(codeGenerator());
+    }
+}
+
+console.log(minor);
+console.log(arr1.length);
+console.log(arr2.length);
+
+
+function codeGenerator() {
+    var code = "";
+    var alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "u", "v", "w", "x", "y", "z"];
+
+    while (code.length < 3) {
+        code += alfabeto[getRandomNumber(0, alfabeto.length - 1)];
+    }
+
+    code += getRandomNumber(100, 999);
+    return code;
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
