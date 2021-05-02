@@ -1,5 +1,5 @@
 // jsnacks 3
-
+/*
 $(document).ready(function() {
     var zucchine = [{
             nome: "Romanesco",
@@ -62,3 +62,50 @@ $(document).ready(function() {
 
     console.log("Il peso totale delle zucchine è " + pesoTotale);
 });
+*/
+
+
+
+// jsnack 2
+/*
+var team = [{
+        name: "Cosmin"
+    },
+    {
+        name: "Iris"
+    },
+    {
+        name: "Angelo"
+    },
+    {
+        name: "Vincenzo"
+    },
+    {
+        name: "Pino"
+    }
+];
+
+for (var player of team) {
+    player.code = codeGenerator();
+    player.media = getRandomNumber(0, 50);
+    player.perc = getRandomNumber(0, 100);
+}
+
+console.log(team);
+
+function codeGenerator() {
+    var code = "";
+    var alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "u", "v", "w", "x", "y", "z"];
+
+    while (code.length < 3) {
+        code += alfabeto[getRandomNumber(0, alfabeto.length - 1)];
+    }
+
+    code += getRandomNumber(100, 999);
+    return code;
+}
+
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+*/
